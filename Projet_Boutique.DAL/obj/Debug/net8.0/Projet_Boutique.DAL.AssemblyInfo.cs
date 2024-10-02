@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projet_Boutique.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba00bf3d784f8f4868bdc22e6f364de2b9bc0fb5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projet_Boutique.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projet_Boutique.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
