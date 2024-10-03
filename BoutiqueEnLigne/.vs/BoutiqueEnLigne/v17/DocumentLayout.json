@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D504709-0192-4F18-9CDB-5D70C18A0DC6}|..\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.dal\\projet_boutique.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.dal\\database\\boutiquecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\boutiqueenligne\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -32,12 +44,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.dal\\database\\configurations\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D504709-0192-4F18-9CDB-5D70C18A0DC6}|..\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj|c:\\users\\studentdot0410\\documents\\technifutur\\projets\\projet_boutique\\projet_boutique.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,24 +53,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Projet_Boutique.DAL",
+              "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+              "RelativeDocumentMoniker": "..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+              "ToolTip": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+              "RelativeToolTip": "..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-03T14:26:54.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BoutiqueContext.cs",
+              "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\DataBase\\BoutiqueContext.cs",
+              "RelativeDocumentMoniker": "..\\Projet_Boutique.DAL\\DataBase\\BoutiqueContext.cs",
+              "ToolTip": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\DataBase\\BoutiqueContext.cs",
+              "RelativeToolTip": "..\\Projet_Boutique.DAL\\DataBase\\BoutiqueContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T14:26:47.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-10-03T13:38:39.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Views\\Product\\Detail.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Detail.cshtml",
@@ -72,12 +104,11 @@
               "RelativeToolTip": "Views\\Product\\Detail.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-03T13:35:16.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T13:35:16.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ProductMapper.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Mapper\\ProductMapper.cs",
               "RelativeDocumentMoniker": "Mapper\\ProductMapper.cs",
@@ -85,12 +116,11 @@
               "RelativeToolTip": "Mapper\\ProductMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:16:46.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T13:16:46.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -98,12 +128,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:16:40.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T13:16:40.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "UserConfig.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\DataBase\\Configurations\\UserConfig.cs",
               "RelativeDocumentMoniker": "..\\Projet_Boutique.DAL\\DataBase\\Configurations\\UserConfig.cs",
@@ -111,38 +140,37 @@
               "RelativeToolTip": "..\\Projet_Boutique.DAL\\DataBase\\Configurations\\UserConfig.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:04:06.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T13:04:06.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "..\\Projet_Boutique.DAL\\Repositories\\ProductRepository.cs",
               "ToolTip": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Repositories\\ProductRepository.cs",
               "RelativeToolTip": "..\\Projet_Boutique.DAL\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:41:09.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "..\\Projet_Boutique.BLL\\Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\ProductService.cs",
               "RelativeToolTip": "..\\Projet_Boutique.BLL\\Services\\ProductService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:40:54.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ProductViewModel.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Models\\ProductViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
@@ -150,12 +178,11 @@
               "RelativeToolTip": "Models\\ProductViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:31:57.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T12:31:57.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Product\\Index.cshtml",
@@ -163,12 +190,11 @@
               "RelativeToolTip": "Views\\Product\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-03T12:17:39.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T12:17:39.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -176,8 +202,7 @@
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T12:14:15.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T12:14:15.933Z"
             }
           ]
         }
