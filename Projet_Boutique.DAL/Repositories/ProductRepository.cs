@@ -1,4 +1,5 @@
-﻿using Projet_Boutique.DAL.DataBase;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+using Projet_Boutique.DAL.DataBase;
 using Projet_Boutique.DAL.Entities;
 using Projet_Boutique.DAL.Repositories.Interfaces;
 using System;
@@ -18,19 +19,19 @@ namespace Projet_Boutique.DAL.Repositories
         }
         public bool Create(Product entity)
         {
-            _context.Products.Add(entity);
-            if (_context.Products.Add(entity).Entity is not null)
+            Product product = _context.Products.Add(entity).Entity;
+            if (product != null)
             {
+                _context.SaveChanges();
                 return true;
             }
             return false;
         }
-
         public void Delete(Product entity)
         {
             _context.Products.Remove(entity);
+            _context.SaveChanges();
         }
-
         public List<Product> GetAll()
         {
             return _context.Products.ToList();
@@ -43,11 +44,9 @@ namespace Projet_Boutique.DAL.Repositories
         {
             return _context.Products.FirstOrDefault(p => p.Name.Contains(key));
         }
-
         public bool Update(Product entity)
         {
            Product? product = _context.Products.FirstOrDefault(p => p.Id == entity.Id);
-           bool update = false;
             if (product != null)
             {
                 product.Name = entity.Name;
@@ -55,9 +54,10 @@ namespace Projet_Boutique.DAL.Repositories
                 product.TVA = entity.TVA;
                 product.Price = entity.Price;
                 product.Stock = entity.Stock;
-                update = true;
+                _context.SaveChanges();
+                return true;
             }
-            return update;
+            return false;
         }
     }
 }

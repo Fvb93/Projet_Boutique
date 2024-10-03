@@ -1502,20 +1502,6 @@
             "rid": "win"
           }
         }
-      },
-      "Projet_Boutique.BLL/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
-        },
-        "compile": {
-          "bin/placeholder/Projet_Boutique.BLL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Projet_Boutique.BLL.dll": {}
-        }
       }
     }
   },
@@ -4110,11 +4096,6 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Projet_Boutique.BLL/1.0.0": {
-      "type": "project",
-      "path": "../Projet_Boutique.BLL/Projet_Boutique.BLL.csproj",
-      "msbuildProject": "../Projet_Boutique.BLL/Projet_Boutique.BLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4122,8 +4103,7 @@
       "Microsoft.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.8",
-      "Projet_Boutique.BLL >= 1.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.8"
     ]
   },
   "packageFolders": {
@@ -4153,11 +4133,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj": {
-              "projectPath": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

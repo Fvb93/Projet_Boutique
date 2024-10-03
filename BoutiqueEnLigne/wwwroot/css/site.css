@@ -18,5 +18,14 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-image: url('../images/thumb-1920-1115574.jpg');
+}
+
+.fondblanc {
+    background-color: white;
+    border-radius: 1%;
+}
+
+body.ecranprinc {
+    background-image: url('../images/1.png');
 }

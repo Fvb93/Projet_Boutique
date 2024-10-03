@@ -1,8 +1,9 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-}
+    ViewData["Title"] = "FabMarket";
+    ViewBag.BodyClass = "ecranprinc";
+ }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="ecranprinc" class="d-flex flex-column align-items-center" style="height: 90vh">
+    <div style="height: 77vh"></div>
+    <a class="btn btn-outline-light btn-lg" asp-controller="Product" asp-action="Index">Entrer dans le Magasin Virtuel</a>
 </div>

@@ -1,5 +1,6 @@
 using BoutiqueEnLigne.Models;
 using Microsoft.AspNetCore.Mvc;
+using Projet_Boutique.BLL.Services.Interfaces;
 using System.Diagnostics;
 
 namespace BoutiqueEnLigne.Controllers
@@ -7,10 +8,13 @@ namespace BoutiqueEnLigne.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IProductService _service;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, IProductService service)
         {
             _logger = logger;
+            _service = service;
         }
 
         public IActionResult Index()
@@ -18,7 +22,7 @@ namespace BoutiqueEnLigne.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Article()
         {
             return View();
         }

@@ -17,11 +17,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Projet_Boutique.BLL\Projet_Boutique.BLL.csproj" />
-    <ProjectReference Include="..\Projet_Boutique.DAL\Projet_Boutique.DAL.csproj" />
   </ItemGroup>
 
 </Project>

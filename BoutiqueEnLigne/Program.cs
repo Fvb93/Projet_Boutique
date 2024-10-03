@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Projet_Boutique.BLL.Services;
+using Projet_Boutique.BLL.Services.Interfaces;
 using Projet_Boutique.DAL.DataBase;
+using Projet_Boutique.DAL.Repositories;
+using Projet_Boutique.DAL.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,13 @@ builder.Services.AddControllersWithViews();
 
 // Add DB Context
 builder.Services.AddDbContext<BoutiqueContext>(b => b.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+// Add repository FROM DAL
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+// Add servies From BLL
+builder.Services.AddScoped<IProductService, ProductService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
