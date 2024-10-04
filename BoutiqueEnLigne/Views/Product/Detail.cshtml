@@ -2,41 +2,43 @@
 
 @{
     ViewData["Title"] = "Detail";
+    string image = Model.Name;
+    image += ".png";
 }
 
-<h1>Detail</h1>
-
-<div class="fondblanc">
-    <h4>ProductViewModel</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+<div class="detailproduit">
+    <dl>
+        <dd class="col-sm-12 imgproduit">
+            <img class="img-fluid" src="../../Images/Product/@image" alt="photo de @Model.Name" />
+        </dd>
+        <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-5">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-5">
             @Html.DisplayFor(model => model.Description)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+        <dd class = "col-sm-5">
+            @Html.DisplayFor(model => model.Price) €
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.StockDispo)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-5">
             @Html.DisplayFor(model => model.StockDispo)
         </dd>
+       
     </dl>
-</div>
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>
+</div>
 </div>

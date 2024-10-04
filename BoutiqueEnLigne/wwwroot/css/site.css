@@ -1,31 +1,83 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-image: url('../images/thumb-1920-1115574.jpg');
-}
-
-.fondblanc {
-    background-color: white;
-    border-radius: 1%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 body.ecranprinc {
+    display: flex;
+    justify-content: center;
     background-image: url('../images/1.png');
+    background-size: cover;
+    background-attachment : fixed;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+}
+
+.boutonentree {
+    display: flex;
+    justify-content: center;
+    margin-top: 75vh;
+}
+
+
+.listeproduits {  
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius:1%;
+    margin: auto;
+    width: 120vh;
+    padding: 3vh;
+    gap: 3vh;
+}
+
+.tetedeliste {
+    display: flex;
+    gap: 1vh;
+    font-weight: bold;
+}
+
+.corpdeliste {
+    display: flex;
+    flex-direction:column;
+    gap: 1vh;
+}
+
+.produitliste {
+    display: flex;
+    gap: 1vh;
+}
+
+.itemdeliste {
+    flex : 2;
+}
+
+.itemdelistebtn {
+    flex: 1;
+}
+
+.detailproduit {
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 2vh;
+    border-radius: 7%;
+    width: 70vh;
+    margin: auto;
+    width: 70vh;
+}
+
+img {
+    max-height: 40vh;
+
+}
+.imgproduit {
+    display: flex;
+    justify-content: center;
 }
