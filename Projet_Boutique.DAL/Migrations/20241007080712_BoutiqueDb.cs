@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Projet_Boutique.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class BoutiqueDB : Migration
+    public partial class BoutiqueDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,8 +47,8 @@ namespace Projet_Boutique.DAL.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    Price = table.Column<float>(type: "real", nullable: false),
                     Stock = table.Column<int>(type: "int", nullable: false),
                     TVA = table.Column<float>(type: "real", nullable: false)
                 },
@@ -176,26 +176,26 @@ namespace Projet_Boutique.DAL.Migrations
                 columns: new[] { "Id", "Description", "Name", "Price", "Stock", "TVA" },
                 values: new object[,]
                 {
-                    { 1, "High performance laptop", "Laptop", 1200, 10, 21f },
-                    { 2, "Latest model smartphone", "Smartphone", 800, 20, 21f },
-                    { 3, "Noise cancelling headphones", "Wireless Headphones", 200, 50, 21f },
-                    { 4, "Automatic coffee machine", "Coffee Maker", 150, 30, 21f },
-                    { 5, "Fast boiling kettle", "Electric Kettle", 50, 60, 21f },
-                    { 6, "High-speed blender", "Blender", 100, 40, 21f },
-                    { 7, "Cordless vacuum cleaner", "Vacuum Cleaner", 250, 25, 21f },
-                    { 8, "Latest generation console", "Gaming Console", 500, 15, 21f },
-                    { 9, "Waterproof fitness smartwatch", "Smartwatch", 150, 35, 21f },
-                    { 10, "Ultra HD 4K smart TV", "4K TV", 900, 10, 21f },
-                    { 11, "Energy-efficient refrigerator", "Refrigerator", 1200, 8, 21f },
-                    { 12, "Front load washing machine", "Washing Machine", 800, 12, 21f },
-                    { 13, "Automatic dishwasher", "Dishwasher", 700, 10, 21f },
-                    { 14, "Compact microwave oven", "Microwave Oven", 200, 40, 21f },
-                    { 15, "Digital camera with 4K video", "Camera", 1100, 15, 21f },
-                    { 16, "Bluetooth wireless speakers", "Speakers", 300, 25, 21f },
-                    { 17, "WiFi 6 router", "Router", 150, 50, 21f },
-                    { 18, "High-resolution tablet", "Tablet", 600, 20, 21f },
-                    { 19, "All-in-one wireless printer", "Printer", 200, 30, 21f },
-                    { 20, "Portable air conditioner", "Air Conditioner", 700, 10, 21f }
+                    { 1, "High performance laptop", "Laptop", 1200f, 10, 21f },
+                    { 2, "Latest model smartphone", "Smartphone", 800f, 20, 21f },
+                    { 3, "Noise cancelling headphones", "Wireless Headphones", 200f, 50, 21f },
+                    { 4, "Automatic coffee machine", "Coffee Maker", 150f, 30, 21f },
+                    { 5, "Fast boiling kettle", "Electric Kettle", 50f, 60, 21f },
+                    { 6, "High-speed blender", "Blender", 100f, 40, 21f },
+                    { 7, "Cordless vacuum cleaner", "Vacuum Cleaner", 250f, 25, 21f },
+                    { 8, "Latest generation console", "Gaming Console", 500f, 15, 21f },
+                    { 9, "Waterproof fitness smartwatch", "Smartwatch", 150f, 35, 21f },
+                    { 10, "Ultra HD 4K smart TV", "4K TV", 900f, 10, 21f },
+                    { 11, "Energy-efficient refrigerator", "Refrigerator", 1200f, 8, 21f },
+                    { 12, "Front load washing machine", "Washing Machine", 800f, 12, 21f },
+                    { 13, "Automatic dishwasher", "Dishwasher", 700f, 10, 21f },
+                    { 14, "Compact microwave oven", "Microwave Oven", 200f, 40, 21f },
+                    { 15, "Digital camera with 4K video", "Camera", 1100f, 15, 21f },
+                    { 16, "Bluetooth wireless speakers", "Speakers", 300f, 25, 21f },
+                    { 17, "WiFi 6 router", "Router", 150f, 50, 21f },
+                    { 18, "High-resolution tablet", "Tablet", 600f, 20, 21f },
+                    { 19, "All-in-one wireless printer", "Printer", 200f, 30, 21f },
+                    { 20, "Portable air conditioner", "Air Conditioner", 700f, 10, 21f }
                 });
 
             migrationBuilder.CreateIndex(

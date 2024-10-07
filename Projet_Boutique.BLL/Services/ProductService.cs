@@ -30,6 +30,7 @@ namespace Projet_Boutique.BLL.Services
             {
                 throw new ProductNotFoundException($"Aucune produit n'a été trouvé, suppression impossible");
             }
+             _repo.Delete(entity);
         }
         public List<Product> GetAll()
         {

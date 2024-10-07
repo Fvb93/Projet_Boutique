@@ -12,8 +12,8 @@ using Projet_Boutique.DAL.DataBase;
 namespace Projet_Boutique.DAL.Migrations
 {
     [DbContext(typeof(BoutiqueContext))]
-    [Migration("20241004090428_BoutiqueDBLocal")]
-    partial class BoutiqueDBLocal
+    [Migration("20241007080712_BoutiqueDb")]
+    partial class BoutiqueDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,7 +155,6 @@ namespace Projet_Boutique.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -164,8 +163,8 @@ namespace Projet_Boutique.DAL.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -184,7 +183,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 1,
                             Description = "High performance laptop",
                             Name = "Laptop",
-                            Price = 1200,
+                            Price = 1200f,
                             Stock = 10,
                             TVA = 21f
                         },
@@ -193,7 +192,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 2,
                             Description = "Latest model smartphone",
                             Name = "Smartphone",
-                            Price = 800,
+                            Price = 800f,
                             Stock = 20,
                             TVA = 21f
                         },
@@ -202,7 +201,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 3,
                             Description = "Noise cancelling headphones",
                             Name = "Wireless Headphones",
-                            Price = 200,
+                            Price = 200f,
                             Stock = 50,
                             TVA = 21f
                         },
@@ -211,7 +210,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 4,
                             Description = "Automatic coffee machine",
                             Name = "Coffee Maker",
-                            Price = 150,
+                            Price = 150f,
                             Stock = 30,
                             TVA = 21f
                         },
@@ -220,7 +219,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 5,
                             Description = "Fast boiling kettle",
                             Name = "Electric Kettle",
-                            Price = 50,
+                            Price = 50f,
                             Stock = 60,
                             TVA = 21f
                         },
@@ -229,7 +228,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 6,
                             Description = "High-speed blender",
                             Name = "Blender",
-                            Price = 100,
+                            Price = 100f,
                             Stock = 40,
                             TVA = 21f
                         },
@@ -238,7 +237,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 7,
                             Description = "Cordless vacuum cleaner",
                             Name = "Vacuum Cleaner",
-                            Price = 250,
+                            Price = 250f,
                             Stock = 25,
                             TVA = 21f
                         },
@@ -247,7 +246,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 8,
                             Description = "Latest generation console",
                             Name = "Gaming Console",
-                            Price = 500,
+                            Price = 500f,
                             Stock = 15,
                             TVA = 21f
                         },
@@ -256,7 +255,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 9,
                             Description = "Waterproof fitness smartwatch",
                             Name = "Smartwatch",
-                            Price = 150,
+                            Price = 150f,
                             Stock = 35,
                             TVA = 21f
                         },
@@ -265,7 +264,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 10,
                             Description = "Ultra HD 4K smart TV",
                             Name = "4K TV",
-                            Price = 900,
+                            Price = 900f,
                             Stock = 10,
                             TVA = 21f
                         },
@@ -274,7 +273,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 11,
                             Description = "Energy-efficient refrigerator",
                             Name = "Refrigerator",
-                            Price = 1200,
+                            Price = 1200f,
                             Stock = 8,
                             TVA = 21f
                         },
@@ -283,7 +282,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 12,
                             Description = "Front load washing machine",
                             Name = "Washing Machine",
-                            Price = 800,
+                            Price = 800f,
                             Stock = 12,
                             TVA = 21f
                         },
@@ -292,7 +291,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 13,
                             Description = "Automatic dishwasher",
                             Name = "Dishwasher",
-                            Price = 700,
+                            Price = 700f,
                             Stock = 10,
                             TVA = 21f
                         },
@@ -301,7 +300,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 14,
                             Description = "Compact microwave oven",
                             Name = "Microwave Oven",
-                            Price = 200,
+                            Price = 200f,
                             Stock = 40,
                             TVA = 21f
                         },
@@ -310,7 +309,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 15,
                             Description = "Digital camera with 4K video",
                             Name = "Camera",
-                            Price = 1100,
+                            Price = 1100f,
                             Stock = 15,
                             TVA = 21f
                         },
@@ -319,7 +318,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 16,
                             Description = "Bluetooth wireless speakers",
                             Name = "Speakers",
-                            Price = 300,
+                            Price = 300f,
                             Stock = 25,
                             TVA = 21f
                         },
@@ -328,7 +327,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 17,
                             Description = "WiFi 6 router",
                             Name = "Router",
-                            Price = 150,
+                            Price = 150f,
                             Stock = 50,
                             TVA = 21f
                         },
@@ -337,7 +336,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 18,
                             Description = "High-resolution tablet",
                             Name = "Tablet",
-                            Price = 600,
+                            Price = 600f,
                             Stock = 20,
                             TVA = 21f
                         },
@@ -346,7 +345,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 19,
                             Description = "All-in-one wireless printer",
                             Name = "Printer",
-                            Price = 200,
+                            Price = 200f,
                             Stock = 30,
                             TVA = 21f
                         },
@@ -355,7 +354,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Id = 20,
                             Description = "Portable air conditioner",
                             Name = "Air Conditioner",
-                            Price = 700,
+                            Price = 700f,
                             Stock = 10,
                             TVA = 21f
                         });

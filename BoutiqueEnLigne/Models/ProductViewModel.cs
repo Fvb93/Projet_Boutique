@@ -9,10 +9,11 @@ namespace BoutiqueEnLigne.Models
         [DisplayName("Nom du produit :")]
         public string Name { get; set; }
         [DisplayName("Description du produit :")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [DisplayName("Prix :")]
-        public int Price { get; set; }
+        public float Price { get; set; }
         [DisplayName("Disponibilité :")]
         public bool StockDispo { get; set; }
+        public int Stock { get; set; }
     }
 }

@@ -29,6 +29,52 @@ namespace BoutiqueEnLigne.Controllers
             }
             return View(detailProduct);
         }
+        public IActionResult Delete([FromRoute] int id)
+        {
+            Product detailProduct = _service.GetById(id);
+            if (detailProduct is null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            _service.Delete(detailProduct);
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add([FromForm] ProductFormModel ajoutProduit)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(ajoutProduit);
+            }
+
+            _service.Create(ajoutProduit.fromFormtoProduct());
+
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Update([FromRoute] int id)
+        {
+            Product majProduct = _service.GetById(id);
+            if (majProduct   is null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return View(majProduct.toFormModel());
+        }
+        [HttpPost]
+        public IActionResult Update([FromForm] ProductFormModel modifierProduit, int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(modifierProduit);
+            }
+           
+            modifierProduit.Id = id;
+            _service.Update(modifierProduit.fromFormtoProduct());
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
-

@@ -7,6 +7,7 @@
 
 <div class="listeproduits">
     <div class="tetedeliste">
+        <div class="itemdelistebtn">@Html.DisplayNameFor(model => model.Id)</div>
         <div class="itemdeliste">@Html.DisplayNameFor(model => model.Name)</div>
         <div class="itemdeliste">@Html.DisplayNameFor(model => model.Price) </div>
         <div class="itemdeliste">@Html.DisplayNameFor(model => model.StockDispo)</div>
@@ -19,6 +20,7 @@
             @foreach (var item in Model)
         {   
             <div class="produitliste">
+                <div class="itemdelistebtn">@item.Id</div>
                 <div class="itemdeliste">@item.Name</div>
                 <div class="itemdeliste">@item.Price </div>
                 <div class="itemdeliste">@item.StockDispo</div>

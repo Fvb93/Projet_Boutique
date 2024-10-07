@@ -4107,24 +4107,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MonPC\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\studentdot0410\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
       "projectName": "Projet_Boutique.DAL",
-      "projectPath": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
-      "packagesPath": "C:\\Users\\MonPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.DAL\\obj\\",
+      "projectPath": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj",
+      "packagesPath": "C:\\Users\\studentdot0410\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\studentdot0410\\Documents\\TechniFutur\\Projets\\Projet_Boutique\\Projet_Boutique.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MonPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\studentdot0410\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
