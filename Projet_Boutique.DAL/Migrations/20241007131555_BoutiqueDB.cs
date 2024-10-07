@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Projet_Boutique.DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class BoutiqueDb : Migration
+    public partial class BoutiqueDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -172,6 +172,19 @@ namespace Projet_Boutique.DAL.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Categorie",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Électronique" },
+                    { 2, "Appareils ménagers" },
+                    { 3, "Accessoires" },
+                    { 4, "Informatique" },
+                    { 5, "Gaming" },
+                    { 6, "Électroménager" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Produit",
                 columns: new[] { "Id", "Description", "Name", "Price", "Stock", "TVA" },
                 values: new object[,]
@@ -196,6 +209,34 @@ namespace Projet_Boutique.DAL.Migrations
                     { 18, "High-resolution tablet", "Tablet", 600f, 20, 21f },
                     { 19, "All-in-one wireless printer", "Printer", 200f, 30, 21f },
                     { 20, "Portable air conditioner", "Air Conditioner", 700f, 10, 21f }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categorie_Produit_NN",
+                columns: new[] { "CategoryId", "ProductId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 4, 1 },
+                    { 1, 2 },
+                    { 3, 3 },
+                    { 6, 4 },
+                    { 6, 5 },
+                    { 6, 6 },
+                    { 6, 7 },
+                    { 5, 8 },
+                    { 3, 9 },
+                    { 1, 10 },
+                    { 6, 11 },
+                    { 6, 12 },
+                    { 6, 13 },
+                    { 6, 14 },
+                    { 1, 15 },
+                    { 3, 16 },
+                    { 4, 17 },
+                    { 1, 18 },
+                    { 4, 19 },
+                    { 6, 20 }
                 });
 
             migrationBuilder.CreateIndex(

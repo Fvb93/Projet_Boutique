@@ -12,8 +12,8 @@ using Projet_Boutique.DAL.DataBase;
 namespace Projet_Boutique.DAL.Migrations
 {
     [DbContext(typeof(BoutiqueContext))]
-    [Migration("20241007080712_BoutiqueDb")]
-    partial class BoutiqueDb
+    [Migration("20241007131555_BoutiqueDB")]
+    partial class BoutiqueDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,38 @@ namespace Projet_Boutique.DAL.Migrations
                         .HasName("PK_Category");
 
                     b.ToTable("Categorie", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Électronique"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Appareils ménagers"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Accessoires"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Informatique"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Gaming"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Électroménager"
+                        });
                 });
 
             modelBuilder.Entity("Projet_Boutique.DAL.Entities.CategoryProduct", b =>
@@ -56,6 +88,113 @@ namespace Projet_Boutique.DAL.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Categorie_Produit_NN", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ProductId = 1,
+                            CategoryId = 4
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 5
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ProductId = 11,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 12,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 13,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 14,
+                            CategoryId = 6
+                        },
+                        new
+                        {
+                            ProductId = 15,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ProductId = 16,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ProductId = 17,
+                            CategoryId = 4
+                        },
+                        new
+                        {
+                            ProductId = 18,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ProductId = 19,
+                            CategoryId = 4
+                        },
+                        new
+                        {
+                            ProductId = 20,
+                            CategoryId = 6
+                        });
                 });
 
             modelBuilder.Entity("Projet_Boutique.DAL.Entities.Format", b =>

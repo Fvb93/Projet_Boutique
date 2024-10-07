@@ -65,7 +65,7 @@ namespace BoutiqueEnLigne.Controllers
             return View(majProduct.toFormModel());
         }
         [HttpPost]
-        public IActionResult Update([FromForm] ProductFormModel modifierProduit, int id)
+        public IActionResult Update(int id,[FromForm] ProductFormModel modifierProduit)
         {
             if (!ModelState.IsValid)
             {

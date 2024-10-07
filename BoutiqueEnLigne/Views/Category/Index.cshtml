@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BoutiqueEnLigne.Models.CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="containeurcategorie">
+<div class="listecategories">
+
+        @foreach (var item in Model)
+        {
+            <a class="categorieliste"  asp-controller="Category" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+        }
+</div>
+</div>

@@ -1,5 +1,8 @@
 ﻿using BoutiqueEnLigne.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Projet_Boutique.DAL.Entities;
+using System;
 
 namespace BoutiqueEnLigne.Mapper
 {

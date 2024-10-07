@@ -9,5 +9,6 @@ namespace Projet_Boutique.BLL.Services.Interfaces
 {
     public interface ICategoryService : IService<int, Category>
     {
+        public Category GetByName(string key);
     }
 }

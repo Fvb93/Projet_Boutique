@@ -9,24 +9,15 @@ namespace BoutiqueEnLigne.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductService _service;
-
-
         public HomeController(ILogger<HomeController> logger, IProductService service)
         {
             _logger = logger;
             _service = service;
         }
-
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Article()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

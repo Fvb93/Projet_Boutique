@@ -9,5 +9,6 @@ namespace Projet_Boutique.DAL.Repositories.Interfaces
 {
     public interface ICategoryRepository : IRepository<int, Category>
     {
+        public Category? GetByName(string key);
     }
 }

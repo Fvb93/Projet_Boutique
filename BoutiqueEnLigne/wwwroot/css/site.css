@@ -18,7 +18,7 @@ body.ecranprinc {
 main {
     display: flex;
     justify-content: center;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 .boutonentree {
@@ -80,4 +80,30 @@ img {
 .imgproduit {
     display: flex;
     justify-content: center;
+}
+.containeurcategorie {
+    display:flex;
+    justify-content: center;
+}
+.listecategories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3vh;
+    width: 300vh;
+    padding: 5vh;
+    margin-top: 10vh;
+}
+
+.categorieliste {
+    display: flex;
+    width: 30vh;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 100%;
+    font-size: 3vh;
+    text-decoration: none;
+    font-weight: bold;
 }
