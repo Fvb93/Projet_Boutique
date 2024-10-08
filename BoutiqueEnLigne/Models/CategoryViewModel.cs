@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Projet_Boutique.DAL.Entities;
+using System.ComponentModel;
 
 namespace BoutiqueEnLigne.Models
 {
@@ -7,5 +8,7 @@ namespace BoutiqueEnLigne.Models
         public int Id { get; set; }
         [DisplayName("Nom de la catégorie :")]
         public string Name { get; set; }
+        [DisplayName("Categorie du produit :")]
+        public ICollection<CategoryProduct>? ProductsList { get; set; }
     }
 }

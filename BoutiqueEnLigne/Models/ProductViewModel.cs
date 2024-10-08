@@ -10,6 +10,8 @@ namespace BoutiqueEnLigne.Models
         public string Name { get; set; }
         [DisplayName("Description du produit :")]
         public string? Description { get; set; }
+        [DisplayName("Categorie du produit :")]
+        public ICollection<CategoryProduct>? CategoriesList { get; set; }
         [DisplayName("Prix :")]
         public float Price { get; set; }
         [DisplayName("Disponibilité :")]

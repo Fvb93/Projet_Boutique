@@ -8,18 +8,19 @@ namespace BoutiqueEnLigne.Mapper
 {
     public static class ProductMapper
     {
-        public static ProductViewModel toViewModel(this Product product)
+        public static ProductViewModel ToViewModel(this Product product)
         {
             return new ProductViewModel
             {
                 Id = product.Id,
                 Name = product.Name,
+                CategoriesList = product.CategoriesList,
                 Description = product.Description,
                 Price = product.Price,
                 StockDispo = product.Stock > 0 ? true : false
             };
         }
-        public static ProductFormModel toFormModel(this Product product)
+        public static ProductFormModel ToFormModel(this Product product)
         {
                 return new ProductFormModel
                 {
@@ -31,7 +32,7 @@ namespace BoutiqueEnLigne.Mapper
                     TVA = product.TVA
                 };
         }
-        public static Product fromFormtoProduct(this ProductFormModel productViewModel)
+        public static Product FromFormtoProduct(this ProductFormModel productViewModel)
         {
                 return new Product
                 {

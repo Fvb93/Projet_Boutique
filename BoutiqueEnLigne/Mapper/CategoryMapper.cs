@@ -10,7 +10,8 @@ namespace BoutiqueEnLigne.Mapper
             return new CategoryViewModel
             {
                 Id = categorie.Id,
-                Name = categorie.Name
+                Name = categorie.Name,
+                ProductsList = categorie.ProductsList
             };
         }
         public static ProductFormModel ToFormModel(this Category categorie)

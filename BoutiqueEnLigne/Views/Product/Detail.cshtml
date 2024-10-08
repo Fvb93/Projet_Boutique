@@ -15,25 +15,43 @@
             @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-5">
-            @Html.DisplayFor(model => model.Name)
+            @Model.Name
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.CategoriesList)
+        </dt>
+        <dd class="col-sm-5">
+            @if (Model.CategoriesList != null && Model.CategoriesList.Any())
+            {
+                <ul>
+                    @foreach (var categoryProduct in Model.CategoriesList)
+                    {
+                        <li><a asp-controller="Category" asp-action="Detail" asp-route-id="@categoryProduct.CategoryId">@categoryProduct.Category.Name</a></li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Aucune catégorie associée à ce produit.</p>
+            }
         </dd>
         <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
         <dd class = "col-sm-5">
-            @Html.DisplayFor(model => model.Description)
+            @Model.Description
         </dd>
         <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
         <dd class = "col-sm-5">
-            @Html.DisplayFor(model => model.Price) €
+            @Model.Price €
         </dd>
         <dt class = "col-sm-5">
             @Html.DisplayNameFor(model => model.StockDispo)
         </dt>
         <dd class = "col-sm-5">
-            @Html.DisplayFor(model => model.StockDispo)
+            @Model.StockDispo
         </dd>
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Product" asp-action="Index">Retour</a></div>

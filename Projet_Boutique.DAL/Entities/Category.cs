@@ -10,6 +10,6 @@ namespace Projet_Boutique.DAL.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<CategoryProduct>? ProductsList { get; set; }
+        public ICollection<CategoryProduct>? ProductsList { get; set; }
     }
 }

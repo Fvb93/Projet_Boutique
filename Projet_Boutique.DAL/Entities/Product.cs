@@ -15,7 +15,7 @@ namespace Projet_Boutique.DAL.Entities
         public int Stock {  get; set; }
         public IEnumerable<OrderProduct> OrderList { get; set; }
         public float TVA { get; set; }
-        public IEnumerable<CategoryProduct>? CategoriesList { get; set; }
+        public ICollection<CategoryProduct>? CategoriesList { get; set; }
         public IEnumerable<FormatProduct> FormatsList { get; set; }
     }
 }

@@ -1,0 +1,36 @@
+﻿@model BoutiqueEnLigne.Models.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="detailproduit">
+    <dl>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-5">
+            @Model.Name
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.ProductsList)
+        </dt>
+        <dd class="col-sm-5">
+            @if (Model.ProductsList != null && Model.ProductsList.Any())
+            {
+                <ul>
+                    @foreach (var productCategory in Model.ProductsList)
+                    {
+                        <li><a asp-controller="Product" asp-action="Detail" asp-route-id="@productCategory.ProductId">@productCategory.Product.Name</a></li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Aucun produit associé à cette catégorie.</p>
+            }
+        </dd>
+        <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Category" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
+        <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Category" asp-action="Index">Retour</a></div>
+    </dl>
+</div>

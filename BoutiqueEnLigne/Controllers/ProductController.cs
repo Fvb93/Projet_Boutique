@@ -16,19 +16,20 @@ namespace BoutiqueEnLigne.Controllers
         public IActionResult Index()
         {
             IEnumerable<ProductViewModel> productsList = _service.GetAll()
-                                                        .Select(p => p.toViewModel())
+                                                        .Select(p => p.ToViewModel())
                                                         .ToList();
             return View(productsList);
         }
-        public IActionResult Detail([FromRoute]int id)
+        public IActionResult Detail([FromRoute] int id)
         {
-            ProductViewModel detailProduct = _service.GetById(id).toViewModel();
+            ProductViewModel detailProduct = _service.GetById(id).ToViewModel();
             if (detailProduct is null)
             {
                 return RedirectToAction(nameof(Index));
             }
             return View(detailProduct);
         }
+
         public IActionResult Delete([FromRoute] int id)
         {
             Product detailProduct = _service.GetById(id);
@@ -51,7 +52,7 @@ namespace BoutiqueEnLigne.Controllers
                 return View(ajoutProduit);
             }
 
-            _service.Create(ajoutProduit.fromFormtoProduct());
+            _service.Create(ajoutProduit.FromFormtoProduct());
 
             return RedirectToAction(nameof(Index));
         }
@@ -62,7 +63,7 @@ namespace BoutiqueEnLigne.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-            return View(majProduct.toFormModel());
+            return View(majProduct.ToFormModel());
         }
         [HttpPost]
         public IActionResult Update(int id,[FromForm] ProductFormModel modifierProduit)
@@ -73,7 +74,7 @@ namespace BoutiqueEnLigne.Controllers
             }
            
             modifierProduit.Id = id;
-            _service.Update(modifierProduit.fromFormtoProduct());
+            _service.Update(modifierProduit.FromFormtoProduct());
             return RedirectToAction(nameof(Index));
         }
     }

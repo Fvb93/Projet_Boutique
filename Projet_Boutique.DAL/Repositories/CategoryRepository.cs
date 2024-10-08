@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Projet_Boutique.DAL.DataBase;
 using Projet_Boutique.DAL.Entities;
 using Projet_Boutique.DAL.Repositories.Interfaces;
@@ -34,24 +35,24 @@ namespace Projet_Boutique.DAL.Repositories
         }
         public List<Category> GetAll()
         {
-            return _context.Categories.ToList();
+            return _context.Categories.Include(c => c.ProductsList).ThenInclude(cp => cp.Product).ToList();
         }
         public Category? GetById(int key)
         {
-            return _context.Categories.FirstOrDefault(p => p.Id == key);
+            return _context.Categories.Include(c => c.ProductsList).ThenInclude(cp => cp.Product).FirstOrDefault(p => p.Id == key);
         }
         public Category? GetByName(string key)
         {
             {
-                return _context.Categories.FirstOrDefault(p => p.Name.Contains(key));
+                return _context.Categories.Include(c => c.ProductsList).ThenInclude(cp => cp.Product).FirstOrDefault(p => p.Name.Contains(key));
             }
         }
         public bool Update(Category entity)
         {
-            Product? product = _context.Products.FirstOrDefault(p => p.Id == entity.Id);
-            if (product != null)
+            Category? category = _context.Categories.Include(c => c.ProductsList).ThenInclude(cp => cp.Product).FirstOrDefault(p => p.Id == entity.Id);
+            if (category != null)
             {
-                product.Name = entity.Name;
+                category.Name = entity.Name;
                 _context.SaveChanges();
                 return true;
             }
