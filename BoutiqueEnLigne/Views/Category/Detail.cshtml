@@ -13,13 +13,13 @@
             @Model.Name
         </dd>
         <dt class="col-sm-5">
-            @Html.DisplayNameFor(model => model.ProductsList)
+            @Html.DisplayNameFor(model => model.ProductsFK)
         </dt>
         <dd class="col-sm-5">
-            @if (Model.ProductsList != null && Model.ProductsList.Any())
+            @if (Model.ProductsFK != null && Model.ProductsFK.Any())
             {
                 <ul>
-                    @foreach (var productCategory in Model.ProductsList)
+                    @foreach (var productCategory in Model.ProductsFK)
                     {
                         <li><a asp-controller="Product" asp-action="Detail" asp-route-id="@productCategory.ProductId">@productCategory.Product.Name</a></li>
                     }
@@ -29,8 +29,10 @@
             {
                 <p>Aucun produit associé à cette catégorie.</p>
             }
+
         </dd>
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Category" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
+        <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Category" asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Voulez-vous vraiment supprimer la catégorie ?');">Supprimer</a></div>
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Category" asp-action="Index">Retour</a></div>
     </dl>
 </div>

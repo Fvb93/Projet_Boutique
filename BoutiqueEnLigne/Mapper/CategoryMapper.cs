@@ -11,23 +11,23 @@ namespace BoutiqueEnLigne.Mapper
             {
                 Id = categorie.Id,
                 Name = categorie.Name,
-                ProductsList = categorie.ProductsList
+                ProductsFK = categorie.ProductsList
             };
         }
-        public static ProductFormModel ToFormModel(this Category categorie)
+        public static CategoryFormModel ToFormModel(this Category categorie)
         {
-            return new ProductFormModel
+            return new CategoryFormModel
             {
                 Id = categorie.Id,
                 Name = categorie.Name
             };
         }
-        public static Category FromFormtoCategory(this ProductFormModel categoerieViewModel)
+        public static Category FromFormtoCategory(this CategoryFormModel categorieViewModel)
         {
             return new Category
             {
-                Id = categoerieViewModel.Id,
-                Name = categoerieViewModel.Name
+                Id = categorieViewModel.Id,
+                Name = categorieViewModel.Name
             };
         }
     }

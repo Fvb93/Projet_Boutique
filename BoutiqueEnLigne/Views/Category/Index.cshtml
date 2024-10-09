@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 <div class="containeurcategorie">
-<div class="listecategories">
+    <div class="listecategories">
 
         @foreach (var item in Model)
         {
-            <a class="categorieliste"  asp-controller="Category" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
+            <a class="categorieliste" asp-controller="Category" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
         }
+    </div>
 </div>
-</div>
+<a class="btn btn-success" asp-controller="Category" asp-action="Add">Ajouter une nouvelle catégorie</a>

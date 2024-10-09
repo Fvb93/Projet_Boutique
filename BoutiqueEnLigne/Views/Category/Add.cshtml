@@ -1,0 +1,31 @@
+﻿@model BoutiqueEnLigne.Models.CategoryFormModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+
+<div class="row">
+    <div class="col-md-4 detailproduit">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+                <input type="submit" value="Retour" asp-controller="Category" asp-action="Index" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
