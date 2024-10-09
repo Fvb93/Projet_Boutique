@@ -20,6 +20,10 @@ namespace BoutiqueEnLigne.Models
         public int Stock { get; set; } = 0;
         [DisplayName("TVA")]
         public float TVA { get; set; } = 0.21f;
+        [DisplayName("Categories")]
+        public List<CategoryFormModel> Categories { get; set; }
+        //[DisplayName("Categories")]
+        //public List<Category> ListeCat { get; set; }
     }
 }
 

@@ -10,5 +10,6 @@ namespace BoutiqueEnLigne.Models
         public string Name { get; set; }
         [DisplayName("Categorie du produit :")]
         public ICollection<CategoryProduct>? ProductsFK { get; set; }
+       
     }
 }

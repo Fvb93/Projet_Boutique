@@ -6,9 +6,9 @@ namespace BoutiqueEnLigne.Models
     public class CategoryFormModel
     {
         public int Id { get; set; }
-        [DisplayName("Nom du produit :")]
+        [DisplayName("Nom de la catégorie :")]
         public string Name { get; set; }
-        [DisplayName("Description du produit :")]
         public ICollection<CategoryProduct>? ProductList { get; set; }
+        public bool IsSelected { get; set; }
     }
 }

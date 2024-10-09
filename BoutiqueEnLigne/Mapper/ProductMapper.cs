@@ -17,7 +17,8 @@ namespace BoutiqueEnLigne.Mapper
                 CategoriesList = product.CategoriesList,
                 Description = product.Description,
                 Price = product.Price,
-                StockDispo = product.Stock > 0 ? true : false
+                StockDispo = product.Stock > 0 ? true : false,
+                //ListeCat = product.ListeCat
             };
         }
         public static ProductFormModel ToFormModel(this Product product)

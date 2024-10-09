@@ -1,6 +1,7 @@
 ﻿using BoutiqueEnLigne.Mapper;
 using BoutiqueEnLigne.Models;
 using Microsoft.AspNetCore.Mvc;
+using Projet_Boutique.BLL.Services;
 using Projet_Boutique.BLL.Services.Interfaces;
 using Projet_Boutique.DAL.Entities;
 
@@ -9,9 +10,11 @@ namespace BoutiqueEnLigne.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _service;
-        public ProductController (IProductService service)
+        private readonly ICategoryService _serviceCategorie;
+        public ProductController (IProductService service, ICategoryService serviceCat)
             {
                 _service = service;
+                _serviceCategorie = serviceCat;
             }
         public IActionResult Index()
         {
@@ -42,7 +45,17 @@ namespace BoutiqueEnLigne.Controllers
         }
         public IActionResult Add()
         {
-            return View();
+            var categoriesList = _serviceCategorie.GetAll();
+            var model = new ProductFormModel
+            {
+                Categories = categoriesList.Select(c => new CategoryFormModel
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    IsSelected = false
+                }).ToList()
+            };
+            return View(model);
         }
         [HttpPost]
         public IActionResult Add([FromForm] ProductFormModel ajoutProduit)
@@ -51,9 +64,8 @@ namespace BoutiqueEnLigne.Controllers
             {
                 return View(ajoutProduit);
             }
-
-            _service.Create(ajoutProduit.FromFormtoProduct());
-
+            var selectedCategories = ajoutProduit.Categories.Where(c => c.IsSelected).Select(c => c.Id).ToList();
+            _service.Create(ajoutProduit.FromFormtoProduct(), selectedCategories);
             return RedirectToAction(nameof(Index));
         }
         public IActionResult Update([FromRoute] int id)

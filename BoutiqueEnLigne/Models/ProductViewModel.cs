@@ -17,5 +17,8 @@ namespace BoutiqueEnLigne.Models
         [DisplayName("Disponibilité :")]
         public bool StockDispo { get; set; }
         public int Stock { get; set; }
+
+        //[DisplayName("Categories")]
+        //public List<Category> ListeCat { get; set; }
     }
 }

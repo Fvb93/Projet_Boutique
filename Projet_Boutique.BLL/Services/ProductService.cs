@@ -23,6 +23,10 @@ namespace Projet_Boutique.BLL.Services
         {
             return _repo.Create(entity);
         }
+        public bool Create(Product entity, List<int> categorieIds)
+        {
+            return _repo.Create(entity, categorieIds);
+        }
         public void Delete(Product entity)
         {
             Product? product = _repo.GetById(entity.Id);

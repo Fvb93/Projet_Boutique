@@ -28,6 +28,23 @@ namespace Projet_Boutique.DAL.Repositories
             }
             return false;
         }
+        public bool Create(Product entity, List<int> categorieIds)
+        {
+            _context.Products.Add(entity);
+            _context.SaveChanges();
+
+            foreach (var categoryId in categorieIds)
+            {
+                var category = _context.Categories.Find(categoryId);
+                if (category != null)
+                {
+                    entity.CategoriesList.Add(new CategoryProduct { CategoryId = categoryId});
+                    _context.SaveChanges();
+                    return true;
+                }
+            }
+                return false;
+        }
         public void Delete(Product entity)
         {
             _context.Products.Remove(entity);

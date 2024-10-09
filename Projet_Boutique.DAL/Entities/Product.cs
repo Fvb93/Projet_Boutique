@@ -17,5 +17,6 @@ namespace Projet_Boutique.DAL.Entities
         public float TVA { get; set; }
         public ICollection<CategoryProduct>? CategoriesList { get; set; }
         public IEnumerable<FormatProduct> FormatsList { get; set; }
+        //public List<Category> ListeCat { get; set; }
     }
 }

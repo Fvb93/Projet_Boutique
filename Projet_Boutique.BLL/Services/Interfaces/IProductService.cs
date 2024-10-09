@@ -10,5 +10,6 @@ namespace Projet_Boutique.BLL.Services.Interfaces
     public interface IProductService : IService<int, Product>
     {
         public Product GetByName(string key);
+        public bool Create(Product entity, List<int> ints);
     }
 }

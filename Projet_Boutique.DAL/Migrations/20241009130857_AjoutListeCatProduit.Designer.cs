@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projet_Boutique.DAL.DataBase;
 
@@ -11,9 +12,11 @@ using Projet_Boutique.DAL.DataBase;
 namespace Projet_Boutique.DAL.Migrations
 {
     [DbContext(typeof(BoutiqueContext))]
-    partial class BoutiqueContextModelSnapshot : ModelSnapshot
+    [Migration("20241009130857_AjoutListeCatProduit")]
+    partial class AjoutListeCatProduit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
