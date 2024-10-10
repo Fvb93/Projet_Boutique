@@ -35,15 +35,13 @@ namespace Projet_Boutique.DAL.Repositories
 
             foreach (var categoryId in categorieIds)
             {
-                var category = _context.Categories.Find(categoryId);
-                if (category != null)
+                if (categoryId != null)
                 {
                     entity.CategoriesList.Add(new CategoryProduct { CategoryId = categoryId});
                     _context.SaveChanges();
-                    return true;
                 }
             }
-                return false;
+                    return true;
         }
         public void Delete(Product entity)
         {

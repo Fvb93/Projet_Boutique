@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Projet_Boutique.BLL.Services;
 using Projet_Boutique.BLL.Services.Interfaces;
 using Projet_Boutique.DAL.Entities;
+using System.Diagnostics.Metrics;
 
 namespace BoutiqueEnLigne.Controllers
 {
@@ -62,9 +63,34 @@ namespace BoutiqueEnLigne.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(ajoutProduit);
+                foreach (var key in ModelState.Keys)
+                {
+                    var state = ModelState[key];
+                    foreach (var error in state.Errors) // Permet de voir les messages d'erreurs
+                    {
+                        Console.WriteLine($"Erreur dans le champ {key}: {error.ErrorMessage}");
+                    }
+                }
+
+            return View(ajoutProduit);
             }
-            var selectedCategories = ajoutProduit.Categories.Where(c => c.IsSelected).Select(c => c.Id).ToList();
+
+
+            var selectedCategories = ajoutProduit.Categories
+                                        .Where(c => c.IsSelected)
+                                        .Select(c => c.Id)
+                                        .ToList();
+
+            // Vérifier si des catégories ont été sélectionnées
+            if (selectedCategories.Any())
+            {
+                Console.WriteLine("Catégories sélectionnées : " + string.Join(", ", selectedCategories));
+            }
+            else
+            {
+                Console.WriteLine("Aucune catégorie sélectionnée");
+            }
+
             _service.Create(ajoutProduit.FromFormtoProduct(), selectedCategories);
             return RedirectToAction(nameof(Index));
         }

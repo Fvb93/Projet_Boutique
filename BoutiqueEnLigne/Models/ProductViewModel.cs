@@ -13,12 +13,9 @@ namespace BoutiqueEnLigne.Models
         [DisplayName("Categorie du produit :")]
         public ICollection<CategoryProduct>? CategoriesList { get; set; }
         [DisplayName("Prix :")]
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         [DisplayName("Disponibilité :")]
         public bool StockDispo { get; set; }
         public int Stock { get; set; }
-
-        //[DisplayName("Categories")]
-        //public List<Category> ListeCat { get; set; }
     }
 }

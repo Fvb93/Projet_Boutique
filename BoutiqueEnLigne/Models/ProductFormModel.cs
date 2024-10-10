@@ -14,16 +14,15 @@ namespace BoutiqueEnLigne.Models
         [DisplayName("Description")]
         public string? Description { get; set; }
         [DisplayName("Prix")]
+        [Range(1, 10000, ErrorMessage = "Le prix doit être compris entre 1 et 10000")]
         [Required]
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         [DisplayName("Stock")]
         public int Stock { get; set; } = 0;
         [DisplayName("TVA")]
-        public float TVA { get; set; } = 0.21f;
+        public decimal TVA { get; set; } = 21;
         [DisplayName("Categories")]
-        public List<CategoryFormModel> Categories { get; set; }
-        //[DisplayName("Categories")]
-        //public List<Category> ListeCat { get; set; }
+        public List<CategoryFormModel> Categories { get; set; } = new List<CategoryFormModel>();
     }
 }
 

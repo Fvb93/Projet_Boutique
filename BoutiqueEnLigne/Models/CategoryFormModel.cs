@@ -7,8 +7,8 @@ namespace BoutiqueEnLigne.Models
     {
         public int Id { get; set; }
         [DisplayName("Nom de la catégorie :")]
-        public string Name { get; set; }
+        public string Name { get; set; } 
         public ICollection<CategoryProduct>? ProductList { get; set; }
-        public bool IsSelected { get; set; }
+        public bool IsSelected { get; set; } 
     }
 }

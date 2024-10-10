@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+                <input asp-for="Price" class="form-control" type="number" step="0.01" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -31,16 +31,18 @@
             </div>
             <div class="form-group">
                 <label asp-for="TVA" class="control-label"></label>
-                <input asp-for="TVA" class="form-control" value="21" />
+                <input asp-for="TVA" class="form-control" value="21" type="number" step="0.01" />
                 <span asp-validation-for="TVA" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label>Catégories :</label><br />
-                @foreach (var category in Model.Categories)
+                @for (int i = 0; i < Model.Categories.Count; i++)
                 {
-                    <input type="checkbox" asp-for="@category.IsSelected" value="@category.Id" />
-                    <label>@category.Name</label><br />
+                    <input type="checkbox" asp-for="Categories[i].IsSelected" />
+                    <input type="hidden" asp-for="Categories[i].Name" />
+                    <input type="hidden" asp-for="Categories[i].Id" />
+                    <label>@Model.Categories[i].Name</label> <br />
                 }
             </div>
             <div class="form-group">

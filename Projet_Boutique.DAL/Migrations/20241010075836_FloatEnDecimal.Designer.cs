@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projet_Boutique.DAL.DataBase;
 
@@ -11,9 +12,11 @@ using Projet_Boutique.DAL.DataBase;
 namespace Projet_Boutique.DAL.Migrations
 {
     [DbContext(typeof(BoutiqueContext))]
-    partial class BoutiqueContextModelSnapshot : ModelSnapshot
+    [Migration("20241010075836_FloatEnDecimal")]
+    partial class FloatEnDecimal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,8 +308,8 @@ namespace Projet_Boutique.DAL.Migrations
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TVA")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<float>("TVA")
+                        .HasColumnType("real");
 
                     b.HasKey("Id")
                         .HasName("PK_Product");
@@ -321,7 +324,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Laptop",
                             Price = 1200m,
                             Stock = 10,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -330,7 +333,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Smartphone",
                             Price = 800m,
                             Stock = 20,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -339,7 +342,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Wireless Headphones",
                             Price = 200m,
                             Stock = 50,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -348,7 +351,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Coffee Maker",
                             Price = 150m,
                             Stock = 30,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -357,7 +360,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Electric Kettle",
                             Price = 50m,
                             Stock = 60,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -366,7 +369,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Blender",
                             Price = 100m,
                             Stock = 40,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -375,7 +378,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Vacuum Cleaner",
                             Price = 250m,
                             Stock = 25,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -384,7 +387,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Gaming Console",
                             Price = 500m,
                             Stock = 15,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -393,7 +396,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Smartwatch",
                             Price = 150m,
                             Stock = 35,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -402,7 +405,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "4K TV",
                             Price = 900m,
                             Stock = 10,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -411,7 +414,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Refrigerator",
                             Price = 1200m,
                             Stock = 8,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -420,7 +423,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Washing Machine",
                             Price = 800m,
                             Stock = 12,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -429,7 +432,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Dishwasher",
                             Price = 700m,
                             Stock = 10,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -438,7 +441,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Microwave Oven",
                             Price = 200m,
                             Stock = 40,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -447,7 +450,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Camera",
                             Price = 1100m,
                             Stock = 15,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -456,7 +459,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Speakers",
                             Price = 300m,
                             Stock = 25,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -465,7 +468,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Router",
                             Price = 150m,
                             Stock = 50,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -474,7 +477,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Tablet",
                             Price = 600m,
                             Stock = 20,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -483,7 +486,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Printer",
                             Price = 200m,
                             Stock = 30,
-                            TVA = 21m
+                            TVA = 21f
                         },
                         new
                         {
@@ -492,7 +495,7 @@ namespace Projet_Boutique.DAL.Migrations
                             Name = "Air Conditioner",
                             Price = 700m,
                             Stock = 10,
-                            TVA = 21m
+                            TVA = 21f
                         });
                 });
 
