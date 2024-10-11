@@ -17,71 +17,71 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BoutiqueEnLigne
 build_property.RootNamespace = BoutiqueEnLigne
-build_property.ProjectDir = C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\
+build_property.ProjectDir = C:\Users\studentdot0410\Documents\TechniFutur\Projets\Projet_Boutique\BoutiqueEnLigne\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne
+build_property.MSBuildProjectDirectory = C:\Users\studentdot0410\Documents\TechniFutur\Projets\Projet_Boutique\BoutiqueEnLigne
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Category/Add.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Category/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Category/Detail.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Category/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Category/Index.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Category/Update.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Home/Index.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Home/Privacy.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Product/Add.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Product/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Product/Detail.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Product/Index.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Product/Update.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Shared/Error.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/_ViewImports.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/_ViewStart.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/MonPC/Documents/TechniFutur/Projet/Projet_Boutique/BoutiqueEnLigne/Views/Shared/_Layout.cshtml]
+[C:/Users/studentdot0410/Documents/TechniFutur/Projets/Projet_Boutique/BoutiqueEnLigne/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-h0idigtlkg

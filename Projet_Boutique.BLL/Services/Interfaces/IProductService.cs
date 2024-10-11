@@ -11,5 +11,6 @@ namespace Projet_Boutique.BLL.Services.Interfaces
     {
         public Product GetByName(string key);
         public bool Create(Product entity, List<int> ints);
+        public bool Update(Product entity, List<int> ints);
     }
 }

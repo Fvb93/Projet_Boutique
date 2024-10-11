@@ -75,5 +75,31 @@ namespace Projet_Boutique.DAL.Repositories
             }
             return false;
         }
+        public bool Update(Product entity, List<int> categorieIds)
+        {
+            Product? product = _context.Products.Include(c => c.CategoriesList).ThenInclude(cp => cp.Category).FirstOrDefault(p => p.Id == entity.Id);
+            if (product != null)
+            {
+                product.Name = entity.Name;
+                product.Description = entity.Description;
+                product.TVA = entity.TVA;
+                product.Price = entity.Price;
+                product.Stock = entity.Stock;
+                entity.CategoriesList.Clear();
+                _context.CategoryProducts.Remove();
+                foreach (var categoryId in categorieIds)
+                {
+                    if (categoryId != null)
+                    {
+
+                        entity.CategoriesList.Add(new CategoryProduct { CategoryId = categoryId });
+                        _context.SaveChanges();
+                    }
+                }
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }

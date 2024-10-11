@@ -18,7 +18,6 @@ namespace BoutiqueEnLigne.Mapper
                 Description = product.Description,
                 Price = product.Price,
                 StockDispo = product.Stock > 0 ? true : false,
-                //ListeCat = product.ListeCat
             };
         }
         public static ProductFormModel ToFormModel(this Product product)
@@ -27,6 +26,7 @@ namespace BoutiqueEnLigne.Mapper
                 {
                     Id = product.Id,
                     Name = product.Name,
+                    CategoriesList = product.CategoriesList,
                     Description = product.Description,
                     Price = product.Price,
                     Stock = product.Stock,
@@ -39,6 +39,7 @@ namespace BoutiqueEnLigne.Mapper
                 {
                     Id = productViewModel.Id,
                     Name = productViewModel.Name,
+                    CategoriesList = productViewModel.CategoriesList,
                     Description = productViewModel.Description,
                     Price = productViewModel.Price,
                     Stock = productViewModel.Stock,

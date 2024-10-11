@@ -66,5 +66,9 @@ namespace Projet_Boutique.BLL.Services
         {
             return _repo.Update(entity);
         }
+        public bool Update(Product entity, List<int> categorieIds)
+        {
+            return _repo.Create(entity, categorieIds);
+        }
     }
 }

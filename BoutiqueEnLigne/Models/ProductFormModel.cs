@@ -23,6 +23,8 @@ namespace BoutiqueEnLigne.Models
         public decimal TVA { get; set; } = 21;
         [DisplayName("Categories")]
         public List<CategoryFormModel> Categories { get; set; } = new List<CategoryFormModel>();
+        [DisplayName("Categorie du produit :")]
+        public ICollection<CategoryProduct>? CategoriesList { get; set; }
     }
 }
 

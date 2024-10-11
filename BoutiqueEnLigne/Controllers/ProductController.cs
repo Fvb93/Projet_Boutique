@@ -71,10 +71,8 @@ namespace BoutiqueEnLigne.Controllers
                         Console.WriteLine($"Erreur dans le champ {key}: {error.ErrorMessage}");
                     }
                 }
-
             return View(ajoutProduit);
             }
-
 
             var selectedCategories = ajoutProduit.Categories
                                         .Where(c => c.IsSelected)
@@ -101,18 +99,56 @@ namespace BoutiqueEnLigne.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-            return View(majProduct.ToFormModel());
+
+            var categoriesList = _serviceCategorie.GetAll();
+            var model = new ProductFormModel
+            {
+                Id = majProduct.Id,
+                Name = majProduct.Name,
+                Description = majProduct.Description,
+                Price = majProduct.Price,
+                Stock = majProduct.Stock,
+                TVA = majProduct.TVA,
+                Categories = categoriesList.Select(c => new CategoryFormModel
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    IsSelected = false
+                }).ToList()
+            };
+            return View(model);
         }
         [HttpPost]
-        public IActionResult Update(int id,[FromForm] ProductFormModel modifierProduit)
+        public IActionResult Update([FromForm] ProductFormModel modifierProduit)
         {
             if (!ModelState.IsValid)
             {
+                foreach (var key in ModelState.Keys)
+                {
+                    var state = ModelState[key];
+                    foreach (var error in state.Errors) // Permet de voir les messages d'erreurs
+                    {
+                        Console.WriteLine($"Erreur dans le champ {key}: {error.ErrorMessage}");
+                    }
+                }
                 return View(modifierProduit);
             }
-           
-            modifierProduit.Id = id;
-            _service.Update(modifierProduit.FromFormtoProduct());
+            var selectedCategories = modifierProduit.Categories
+                                        .Where(c => c.IsSelected)
+                                        .Select(c => c.Id)
+                                        .ToList();
+
+            // Vérifier si des catégories ont été sélectionnées
+            if (selectedCategories.Any())
+            {
+                Console.WriteLine("Catégories sélectionnées : " + string.Join(", ", selectedCategories));
+            }
+            else
+            {
+                Console.WriteLine("Aucune catégorie sélectionnée");
+            }
+
+            _service.Update(modifierProduit.FromFormtoProduct(), selectedCategories);
             return RedirectToAction(nameof(Index));
         }
     }
