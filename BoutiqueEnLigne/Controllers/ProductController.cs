@@ -113,7 +113,7 @@ namespace BoutiqueEnLigne.Controllers
                 {
                     Id = c.Id,
                     Name = c.Name,
-                    IsSelected = false
+                    IsSelected = c.ProductsList.Where(cp => cp.ProductId == id).Any(), //Permet de rechercher si une catégorie est déjà présente ou pas !
                 }).ToList()
             };
             return View(model);
