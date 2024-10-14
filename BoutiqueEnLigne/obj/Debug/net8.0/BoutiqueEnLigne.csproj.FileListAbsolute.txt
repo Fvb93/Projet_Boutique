@@ -512,3 +512,5 @@ C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\obj\
 C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\obj\Debug\net8.0\BoutiqueEnLigne.pdb
 C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\obj\Debug\net8.0\BoutiqueEnLigne.genruntimeconfig.cache
 C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\obj\Debug\net8.0\ref\BoutiqueEnLigne.dll
+C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MonPC\Documents\TechniFutur\Projet\Projet_Boutique\BoutiqueEnLigne\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

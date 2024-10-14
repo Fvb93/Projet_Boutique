@@ -33,7 +33,6 @@ namespace BoutiqueEnLigne.Controllers
             }
             return View(detailProduct);
         }
-
         public IActionResult Delete([FromRoute] int id)
         {
             Product detailProduct = _service.GetById(id);

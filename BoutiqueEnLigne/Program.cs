@@ -16,10 +16,12 @@ builder.Services.AddDbContext<BoutiqueContext>(b => b.UseSqlServer(builder.Confi
 // Add repository FROM DAL
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Add servies From BLL
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

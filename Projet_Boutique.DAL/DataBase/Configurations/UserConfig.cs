@@ -31,7 +31,7 @@ namespace Projet_Boutique.DAL.DataBase.Configurations
             builder.Property(u => u.Password)
                 .IsRequired();
 
-            builder.Property(u => u.Birthdate)
+            builder.Property(u => u.BirthDate)
                 .IsRequired();
             #endregion
 

@@ -504,6 +504,9 @@ namespace Projet_Boutique.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Admin")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("Birthdate")
                         .HasColumnType("datetime2");
 
@@ -527,6 +530,18 @@ namespace Projet_Boutique.DAL.Migrations
                         .HasName("PK_User");
 
                     b.ToTable("Utilisateur", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Admin = true,
+                            Birthdate = new DateTime(1993, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "fabianvanb@proton.me",
+                            FirstName = "Fabian",
+                            Name = "Van Buggenhout",
+                            Password = "admin"
+                        });
                 });
 
             modelBuilder.Entity("Projet_Boutique.DAL.Entities.CategoryProduct", b =>

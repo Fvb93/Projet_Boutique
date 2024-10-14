@@ -37,6 +37,7 @@ namespace Projet_Boutique.DAL.DataBase
             modelBuilder.ApplyConfiguration(new DataProduct());
             modelBuilder.ApplyConfiguration(new DataCategory());
             modelBuilder.ApplyConfiguration(new DataCategoryProduct());
+            modelBuilder.ApplyConfiguration(new DataUser());
         }
     }
 }

@@ -9,5 +9,6 @@ namespace Projet_Boutique.BLL.Services.Interfaces
 {
     public interface IUserService : IService<int, User>
     {
+        public User GetByName(string key);
     }
 }

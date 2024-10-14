@@ -13,7 +13,9 @@ namespace Projet_Boutique.DAL.Entities
         public string FirstName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public DateTime Birthdate { get; set; }
-        public IEnumerable<Order>? OrderList{ get; set; }
+        public DateTime BirthDate { get; set; }
+        public List<Order>? OrderList { get; set; }
+        public bool Admin {  get; set; }
     }
 }
+

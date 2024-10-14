@@ -85,14 +85,14 @@ namespace Projet_Boutique.DAL.Repositories
                 product.TVA = entity.TVA;
                 product.Price = entity.Price;
                 product.Stock = entity.Stock;
-                entity.CategoriesList.Clear();
-                _context.CategoryProducts.Remove();
+                product.CategoriesList.Clear();
+
                 foreach (var categoryId in categorieIds)
                 {
                     if (categoryId != null)
                     {
 
-                        entity.CategoriesList.Add(new CategoryProduct { CategoryId = categoryId });
+                        product.CategoriesList.Add(new CategoryProduct { CategoryId = categoryId });
                         _context.SaveChanges();
                     }
                 }
