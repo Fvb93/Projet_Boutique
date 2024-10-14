@@ -20,7 +20,6 @@ namespace BoutiqueEnLigne.Controllers
                                                         .ToList();
             return View(categorieListe);
         }
-
         public IActionResult Detail([FromRoute] int id)
         {
             CategoryViewModel detailCategorie = _service.GetById(id).ToViewModel();

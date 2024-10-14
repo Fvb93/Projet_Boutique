@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var userFirstName = Context.Session.GetString("Prenom");
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,6 +33,29 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Utilisateurs</a>
+                        </li>
+                        </ul>
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            @if (string.IsNullOrEmpty(userFirstName))
+                            {
+                            <li class="nav-item ">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Add">Créer un compte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Se connecter</a>
+                            </li>
+                            }
+                            else
+                            {
+                            <li class="nav-item">
+                                <span class="nav-link text-dark">Bonjour, @userFirstName</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-dark" asp-area="" asp-controller="User" asp-action="Logout">Se déconnecter</a>
+                            </li>
+                            }
                         </li>
                     </ul>
                 </div>

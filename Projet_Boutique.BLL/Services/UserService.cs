@@ -45,9 +45,9 @@ namespace Projet_Boutique.BLL.Services
 
             return user;
         }
-        public User GetByName(string key)
+        public User GetByEmail(string key)
         {
-            User? user = _repo.GetByName(key);
+            User? user = _repo.GetByEmail(key);
 
             if (user is null)
             {

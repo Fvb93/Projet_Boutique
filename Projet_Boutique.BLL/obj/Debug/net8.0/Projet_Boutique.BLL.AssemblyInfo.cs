@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projet_Boutique.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bda2b198c53462f73efb4a00f2352921ea1d187")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bb67e06e93db993a98b69a8f01366909886d79c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projet_Boutique.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projet_Boutique.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

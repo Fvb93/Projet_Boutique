@@ -31,7 +31,7 @@ namespace BoutiqueEnLigne.Mapper
                 Orders = user.OrderList
             };
         }
-        public static User FromFormtoProduct(this UserFormModel userViewModel)
+        public static User FromFormtoUser(this UserFormModel userViewModel)
         {
             return new User
             {

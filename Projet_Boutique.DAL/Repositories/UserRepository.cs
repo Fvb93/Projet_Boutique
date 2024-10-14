@@ -40,9 +40,9 @@ namespace Projet_Boutique.DAL.Repositories
         {
             return _context.Users.FirstOrDefault(p => p.Id == key);
         }
-        public User? GetByName(string key)
+        public User? GetByEmail(string key)
         {
-            return _context.Users.FirstOrDefault(p => p.Name.Contains(key));
+            return _context.Users.FirstOrDefault(p => p.Email.Contains(key));
         }
         public bool Update(User entity)
         {

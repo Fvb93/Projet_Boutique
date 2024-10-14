@@ -1,0 +1,55 @@
+﻿@model BoutiqueEnLigne.Models.UserViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="detailproduit">
+    <dl>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-5">
+            @Model.Name
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-5">
+            @Model.FirstName
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-5">
+            @Model.Email
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </dt>
+        <dd class="col-sm-5">
+            @Model.Birthdate 
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.OrderList )
+        </dt>
+        <dd class="col-sm-5">
+            @if (Model.OrderList is not null)
+            {
+                <ul>
+                    @foreach (var item in Model.OrderList)
+                    {
+                        <li>Date de transaction : @item.TransactionDate Montant : @item.Amount</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Aucune commande n'a été passée</p>
+            }
+        </dd>
+
+        <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="User" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
+        <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="User" asp-action="Index">Retour</a></div>
+    </dl>
+</div>

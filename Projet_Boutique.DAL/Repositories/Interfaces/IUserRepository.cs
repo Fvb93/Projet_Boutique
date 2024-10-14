@@ -9,6 +9,6 @@ namespace Projet_Boutique.DAL.Repositories.Interfaces
 {
     public interface IUserRepository : IRepository<int, User>
     {
-        public User? GetByName(string key);
+        public User? GetByEmail(string key);
     }
 }

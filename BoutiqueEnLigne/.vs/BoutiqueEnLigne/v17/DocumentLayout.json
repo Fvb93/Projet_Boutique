@@ -3,21 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\boutiqueenligne\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\boutiqueenligne\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\boutiqueenligne\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\boutiqueenligne\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FC2815A-48BF-4CAB-9220-FB65A74D2FAD}|BoutiqueEnLigne.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D504709-0192-4F18-9CDB-5D70C18A0DC6}|..\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\projet_boutique.bll\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2C3C94-C545-4095-981F-D38A42A89BB2}|..\\Projet_Boutique.DAL\\Projet_Boutique.DAL.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\projet_boutique.dal\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D504709-0192-4F18-9CDB-5D70C18A0DC6}|..\\Projet_Boutique.BLL\\Projet_Boutique.BLL.csproj|c:\\users\\monpc\\documents\\technifutur\\projet\\projet_boutique\\projet_boutique.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,68 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T14:05:59.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T09:38:59.911Z",
+              "WhenOpened": "2024-10-14T13:56:27.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-14T13:13:46.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.DAL\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "..\\Projet_Boutique.DAL\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.DAL\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "..\\Projet_Boutique.DAL\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T09:37:15.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "..\\Projet_Boutique.BLL\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "..\\Projet_Boutique.BLL\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T09:36:25.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\BoutiqueEnLigne\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwFYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:59:55.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "..\\Projet_Boutique.BLL\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\MonPC\\Documents\\TechniFutur\\Projet\\Projet_Boutique\\Projet_Boutique.BLL\\Services\\UserService.cs",
-              "RelativeToolTip": "..\\Projet_Boutique.BLL\\Services\\UserService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T08:59:15.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T08:59:55.183Z"
             }
           ]
         }
