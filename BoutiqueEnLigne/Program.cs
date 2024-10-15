@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Projet_Boutique.BLL.Services;
 using Projet_Boutique.BLL.Services.Interfaces;
@@ -26,6 +27,20 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy =>
+        policy.RequireClaim("Admin", "True")); // La politique exige que l'utilisateur soit admin
+});
+
+// Add authentication with cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/User/Login";  // Redirige vers la page de login si non authentifié
+        options.AccessDeniedPath = "/Home/AccessDenied";  // Page si accès refusé
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,9 +54,8 @@ if (!app.Environment.IsDevelopment())
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

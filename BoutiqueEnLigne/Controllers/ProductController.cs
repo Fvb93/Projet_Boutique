@@ -1,5 +1,6 @@
 ﻿using BoutiqueEnLigne.Mapper;
 using BoutiqueEnLigne.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Projet_Boutique.BLL.Services;
 using Projet_Boutique.BLL.Services.Interfaces;
@@ -33,6 +34,7 @@ namespace BoutiqueEnLigne.Controllers
             }
             return View(detailProduct);
         }
+        [Authorize(Policy = "AdminPolicy")]
         public IActionResult Delete([FromRoute] int id)
         {
             Product detailProduct = _service.GetById(id);
@@ -43,6 +45,7 @@ namespace BoutiqueEnLigne.Controllers
             _service.Delete(detailProduct);
             return RedirectToAction(nameof(Index));
         }
+        [Authorize(Policy = "AdminPolicy")]
         public IActionResult Add()
         {
             var categoriesList = _serviceCategorie.GetAll();
@@ -57,6 +60,7 @@ namespace BoutiqueEnLigne.Controllers
             };
             return View(model);
         }
+        [Authorize(Policy = "AdminPolicy")]
         [HttpPost]
         public IActionResult Add([FromForm] ProductFormModel ajoutProduit)
         {
@@ -91,6 +95,7 @@ namespace BoutiqueEnLigne.Controllers
             _service.Create(ajoutProduit.FromFormtoProduct(), selectedCategories);
             return RedirectToAction(nameof(Index));
         }
+        [Authorize(Policy = "AdminPolicy")]
         public IActionResult Update([FromRoute] int id)
         {
             Product majProduct = _service.GetById(id);
@@ -117,6 +122,7 @@ namespace BoutiqueEnLigne.Controllers
             };
             return View(model);
         }
+        [Authorize(Policy = "AdminPolicy")]
         [HttpPost]
         public IActionResult Update([FromForm] ProductFormModel modifierProduit)
         {

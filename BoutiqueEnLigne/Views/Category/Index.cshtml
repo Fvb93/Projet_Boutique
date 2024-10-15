@@ -12,4 +12,7 @@
         }
     </div>
 </div>
+                @if (User.HasClaim("Admin", "True"))
+                {
 <a class="btn btn-success" asp-controller="Category" asp-action="Add">Ajouter une nouvelle catégorie</a>
+                }

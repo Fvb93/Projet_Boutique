@@ -31,8 +31,11 @@
             }
 
         </dd>
+                        @if (User.HasClaim("Admin", "True"))
+                {
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Category" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Category" asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Voulez-vous vraiment supprimer la catégorie ?');">Supprimer</a></div>
+                }
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Category" asp-action="Index">Retour</a></div>
     </dl>
 </div>

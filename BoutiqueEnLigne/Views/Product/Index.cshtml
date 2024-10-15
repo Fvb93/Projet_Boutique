@@ -25,11 +25,17 @@
                 <div class="itemdeliste">@item.Price </div>
                 <div class="itemdeliste">@item.StockDispo</div>
                 <div class="itemdelistebtn"><a class="btn btn-primary w-100" asp-controller="Product" asp-action="Detail" asp-route-id="@item.Id">Détail</a></div>
-                <div class="itemdelistebtn"><a class="btn btn-primary w-100" asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Etes-vous sûr de vouloir supprimer ce produit?');">Supprimer</a></div>
-                <div class="itemdelistebtn"><a class="btn btn-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@item.Id">Màj</a></div>
+                @if (User.HasClaim("Admin", "True"))
+                {
+                    <div class="itemdelistebtn"><a class="btn btn-primary w-100" asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Etes-vous sûr de vouloir supprimer ce produit?');">Supprimer</a></div>
+                    <div class="itemdelistebtn"><a class="btn btn-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@item.Id">Màj</a></div>
+                }
             </div>
         }
         </div>
+                        @if (User.HasClaim("Admin", "True"))
+                {
 <a class="btn btn-success" asp-controller="Product" asp-action="Add">Ajouter un nouveau Produit</a>
+                }
 </div>           
 

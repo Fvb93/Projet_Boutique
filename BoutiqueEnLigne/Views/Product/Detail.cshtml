@@ -53,7 +53,10 @@
         <dd class = "col-sm-5">
             @Model.StockDispo
         </dd>
+                        @if (User.HasClaim("Admin", "True"))
+                {
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
+                }
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Product" asp-action="Index">Retour</a></div>
     </dl>
 </div>

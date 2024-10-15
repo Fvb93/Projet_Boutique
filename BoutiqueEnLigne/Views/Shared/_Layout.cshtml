@@ -1,5 +1,6 @@
 ﻿@{
     var userFirstName = Context.Session.GetString("Prenom");
+    var userId = Context.Session.GetInt32("Id");
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -31,9 +32,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Produits</a>
                         </li>
+
+                                            @if (User.HasClaim("Admin", "True"))
+                {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Utilisateurs</a>
                         </li>
+                }
                         </ul>
                     <ul class="navbar-nav ms-auto">
 
@@ -51,6 +56,9 @@
                             {
                             <li class="nav-item">
                                 <span class="nav-link text-dark">Bonjour, @userFirstName</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Detail" asp-route-id="@userId">Mon profil</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link  text-dark" asp-area="" asp-controller="User" asp-action="Logout">Se déconnecter</a>

@@ -1,8 +1,11 @@
 ﻿using BoutiqueEnLigne.Mapper;
 using BoutiqueEnLigne.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Projet_Boutique.BLL.Services.Interfaces;
 using Projet_Boutique.DAL.Entities;
+using System.Security.Claims;
 
 namespace BoutiqueEnLigne.Controllers
 {
@@ -78,13 +81,18 @@ namespace BoutiqueEnLigne.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(UserFormModel user)
+        public async Task<IActionResult> LoginAsync(UserFormModel user)
         {
             User userBD = _service.GetByEmail(user.Email);
                 if (user.Email == userBD.Email && user.Password == userBD.Password)
                 {
+                // Appel de la méthode SignInUser pour créer les claims (incluant l'admin)
+                await SignInUser(userBD);
+
                 HttpContext.Session.SetString("Email", userBD.Email);
                 HttpContext.Session.SetString("Prenom", userBD.FirstName);
+                HttpContext.Session.SetInt32("Id", userBD.Id);
+
                 return RedirectToAction("Index", "Home");
                 }
                 else
@@ -93,9 +101,25 @@ namespace BoutiqueEnLigne.Controllers
                     return View(user);
             }
         }
-        public IActionResult Logout()
+        private async Task SignInUser(User user)
+        {
+            var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.Email),
+            new Claim("Admin", user.Admin.ToString()) // Ajoute un claim pour la propriété Admin
+        };
+
+            var identity = new ClaimsIdentity(claims, "login");
+            ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync(claimsPrincipal);
+        }
+        public async Task<IActionResult> LogoutAsync()
         {
             HttpContext.Session.Clear();
+
+            // Déconnecte l'utilisateur en supprimant les cookies d'authentification
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return RedirectToAction("Index","Home");
         }
