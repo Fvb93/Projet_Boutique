@@ -4,6 +4,7 @@
     ViewData["Title"] = "Detail";
     string image = Model.Name;
     image += ".png";
+    var userFirstName = Context.Session.GetString("Prenom");
 }
 
 <div class="detailproduit">
@@ -56,6 +57,10 @@
                         @if (User.HasClaim("Admin", "True"))
                 {
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
+                }
+         @if (!string.IsNullOrEmpty(userFirstName))
+                            {
+        <div class="itemdelistebtn"><a class="btn btn-outline-success w-100" asp-controller="Product" asp-action="AddProductFromCart">Ajouter au panier</a></div>
                 }
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Product" asp-action="Index">Retour</a></div>
     </dl>

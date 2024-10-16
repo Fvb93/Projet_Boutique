@@ -13,6 +13,7 @@ namespace Projet_Boutique.DAL.Entities
         public DateTime TransactionDate { get; set; }
         public float Amount { get; set; }
         public User OrderUser { get; set; }
-        public IEnumerable<OrderProduct>? ProductList { get; set; } 
+        public ICollection<OrderProduct>? ProductList { get; set; }
+        public bool IsFinalized { get; set; } = false;
     }
 }
