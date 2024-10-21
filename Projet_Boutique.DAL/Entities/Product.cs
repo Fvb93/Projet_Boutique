@@ -15,7 +15,7 @@ namespace Projet_Boutique.DAL.Entities
         public int Stock {  get; set; }
         public IEnumerable<OrderProduct> OrderList { get; set; }
         public decimal TVA { get; set; }
-        public ICollection<CategoryProduct>? CategoriesList { get; set; } = [];
+        public ICollection<CategoryProduct> CategoriesList { get; set; } = [];
         public IEnumerable<FormatProduct> FormatsList { get; set; } 
     }
 }

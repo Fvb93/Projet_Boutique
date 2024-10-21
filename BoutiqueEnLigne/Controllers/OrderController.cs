@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BoutiqueEnLigne.Mapper;
+using BoutiqueEnLigne.Models;
+using Microsoft.AspNetCore.Mvc;
 using Projet_Boutique.BLL.Services.Interfaces;
 using Projet_Boutique.DAL.Entities;
 
@@ -7,60 +9,64 @@ namespace BoutiqueEnLigne.Controllers
     public class OrderController : Controller
     {
         private readonly IOrderService _service;
-        public OrderController(IOrderService service)
+        private readonly IUserService _serviceUser;
+        public OrderController(IOrderService service, IUserService serviceUser)
         {
             _service = service;
+            _serviceUser = serviceUser;
         }
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult AddProductToCart(User user, Product product, int quantity)
+        [HttpPost]
+        public IActionResult AddProductToCart([FromForm] ProductFormModel ajoutProduit)
         {
-            var order = user.OrderList.FirstOrDefault(o => !o.IsFinalized);
-            if (order == null)
-            {    
-                order = new Order
+            int id = (int)HttpContext.Session.GetInt32("Id");
+            User user = _serviceUser.GetById(id);
+            var orderUser = user.OrderList.FirstOrDefault(o => !o.IsFinalized);
+            if (orderUser == null)
+            {
+                orderUser = new Order
                 {
                     OrderUser = user,
                     TransactionDate = DateTime.Now,
                     IsFinalized = false,
                     ProductList = new List<OrderProduct>()
                 };
-                user.OrderList.Add(order);
+                user.OrderList.Add(orderUser);
             }
-            var orderProduct = order.ProductList.FirstOrDefault(op => op.ProductId == product.Id);
+            var orderProductList = orderUser.ProductList.Any();
             
-            if (orderProduct != null)
+            if (orderProductList == true)
             {
+                var orderProduct = orderUser.ProductList.FirstOrDefault(p => p.ProductId == ajoutProduit.Id);
+                orderUser.ProductList.Remove(orderProduct);
                 orderProduct.Quantity++;
-                Dictionary<int, int> ProduitQuantité = new Dictionary<int, int>()
-                    {
-                        { product.Id ,  orderProduct.Quantity }
-                    };
-
-                _service.Update(order, ProduitQuantité);
+                orderUser.ProductList.Add(orderProduct);
+                _service.Update(orderUser);
             }
             else
             {
-                order.ProductList.Add(new OrderProduct
+                var orderProduct = new OrderProduct
                 {
-                    ProductId = product.Id,
-                    Product = product,
-                    Quantity = quantity,
-                    AmountTVAC = (float)((product.Price + (product.TVA / 100)) * quantity),
-                    AmountHTVA = (float)(product.Price * quantity)
-                });
-                _service.Create(order);
+                    ProductId = ajoutProduit.Id,
+                    Product = ajoutProduit.FromFormtoProduct(),
+                    Quantity = 1,
+                    AmountHTVA = ajoutProduit.Price,
+                    AmountTVAC = ajoutProduit.Price + (ajoutProduit.TVA / 100),
+                };
+                orderUser.ProductList.Add(orderProduct);
+                _service.Create(orderUser);
             }
             return RedirectToAction("Index", "Product");
         }
-        public void RemoveProductFromCart(User user, int productId)
+        public void RemoveProductFromCart(User user, Product product)
         {
             var order = user.OrderList.FirstOrDefault(o => !o.IsFinalized);
             if (order != null)
             {
-                var orderProduct = order.ProductList.FirstOrDefault(op => op.ProductId == productId);
+                var orderProduct = order.ProductList.FirstOrDefault(op => op.ProductId == product.Id);
                 if (orderProduct != null)
                 {
                     order.ProductList.Remove(orderProduct);

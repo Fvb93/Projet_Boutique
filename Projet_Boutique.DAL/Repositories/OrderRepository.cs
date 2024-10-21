@@ -61,7 +61,14 @@ namespace Projet_Boutique.DAL.Repositories
         }
         public bool Update(Order entity)
         {
-            throw new NotImplementedException();
+            Order? order = _context.Orders.Include(c => c.ProductList).ThenInclude(cp => cp.Product).FirstOrDefault(p => p.Id == entity.Id);
+            if (order != null)
+            {
+                order.ProductList = entity.ProductList;
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

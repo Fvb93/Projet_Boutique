@@ -13,7 +13,7 @@ namespace Projet_Boutique.DAL.Entities
         public int ProductId { get; set; }
         public Product Product { get; set; }
         public int Quantity { get; set; }
-        public float AmountTVAC { get; set; }
-        public float AmountHTVA { get; set; }
+        public decimal AmountTVAC { get; set; }
+        public decimal AmountHTVA { get; set; }
     }
 }

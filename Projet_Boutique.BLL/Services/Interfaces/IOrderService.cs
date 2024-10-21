@@ -9,6 +9,5 @@ namespace Projet_Boutique.BLL.Services.Interfaces
 {
     public interface IOrderService : IService<int, Order>
     {
-        public bool Update(Order entity, Dictionary<int, int> ListeProduits);
     }
 }

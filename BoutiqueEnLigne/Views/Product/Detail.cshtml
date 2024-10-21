@@ -54,13 +54,14 @@
         <dd class = "col-sm-5">
             @Model.StockDispo
         </dd>
+        <input type="hidden" asp-for="Id" />
                         @if (User.HasClaim("Admin", "True"))
                 {
         <div class="itemdelistebtn"><a class="btn btn-outline-primary w-100" asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id">Modifier</a></div>
                 }
          @if (!string.IsNullOrEmpty(userFirstName))
                             {
-        <div class="itemdelistebtn"><a class="btn btn-outline-success w-100" asp-controller="Product" asp-action="AddProductFromCart">Ajouter au panier</a></div>
+            <div class="itemdelistebtn"><a class="btn btn-outline-success w-100" asp-controller="Order" asp-action="AddProductToCart">Ajouter au panier</a></div>
                 }
         <div class="itemdelistebtn"><a class="btn btn-outline-danger w-100" asp-controller="Product" asp-action="Index">Retour</a></div>
     </dl>

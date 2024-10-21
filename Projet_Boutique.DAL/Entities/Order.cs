@@ -11,7 +11,7 @@ namespace Projet_Boutique.DAL.Entities
     {
         public int Id { get; set; }
         public DateTime TransactionDate { get; set; }
-        public float Amount { get; set; }
+        public decimal Amount { get; set; }
         public User OrderUser { get; set; }
         public ICollection<OrderProduct>? ProductList { get; set; }
         public bool IsFinalized { get; set; } = false;

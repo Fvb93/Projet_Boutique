@@ -50,9 +50,5 @@ namespace Projet_Boutique.BLL.Services
         {
             return _repo.Update(entity);
         }
-        public bool Update(Order entity, Dictionary<int, int> ListeProduits)
-        {
-            return _repo.Update(entity, ListeProduits);
-        }
     }
 }
