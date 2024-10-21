@@ -24,7 +24,7 @@ namespace BoutiqueEnLigne.Models
         [DisplayName("Categories")]
         public List<CategoryFormModel> Categories { get; set; } = new List<CategoryFormModel>();
         [DisplayName("Categorie du produit :")]
-        public ICollection<CategoryProduct>? CategoriesList { get; set; }
+        public ICollection<CategoryProduct>? CategoriesList { get; set; } = new List<CategoryProduct>();
     }
 }
 
